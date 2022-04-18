@@ -1,0 +1,43 @@
+.afi__feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    padding: 1rem 2rem;
+}
+
+.afi__feed--contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+.afi__feed table {
+    border-collapse: collapse;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.afi__feed thead {
+    padding: 1rem;
+}
+
+.afi__feed tbody {
+}
+
+.afi__feed tr {
+}
+
+.afi__feed td {
+    padding: 1rem;
+    border-right: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.afi__feed th {
+    padding: 1rem;
+    border-right: 1px solid black;
+    border-radius: 5px;
+
+    text-align: left;
+}

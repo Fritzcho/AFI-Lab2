@@ -9,6 +9,7 @@ const Navbar = () => {
       <div className='afi__navbar--links'>
         <p><Link to="/">Home</Link></p>
         <p><Link to="/create">Create Advertisement</Link></p>
+        <p><Link to="/feed">Advertisements</Link></p>
       </div>
     </div>
   );
