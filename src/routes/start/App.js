@@ -1,5 +1,5 @@
 import React from 'react'
-import {Hero} from '..'
+import {Hero} from '../../containers'
 import './App.css';
 
 const App = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GetRates from "../../utils/GetRates";
 
 export function randomId() {
     const uint32 = window.crypto.getRandomValues(new Uint32Array(1))[0];
@@ -116,6 +117,15 @@ class ScndSubscriberForm extends React.Component {
         this.refreshList();
     }
 
+    submitRate = () => {
+        this.setState({renderRate: true});
+    }
+
+    handleChange = (e) => {
+        this.setState({selectValue:e.target.value});
+        this.setState({renderRate: false})
+    }
+
     render () {
         return (
             <div className='afi_subForm'>
@@ -187,7 +197,18 @@ class ScndSubscriberForm extends React.Component {
                     </label>
                     <label>
                         Pris:
-                        <h2>{this.state.ad_Price} kr</h2>
+                        <select 
+                            value={this.state.selectValue}
+                            onChange={this.handleChange} 
+                        >
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="IRR">IRR</option>
+                            <option value="RUB">RUB</option>
+                        </select>
+                        <input type="button" value="Hämta pris" onClick={this.submitRate}/>
+                        {this.state.renderRate === true && <GetRates exchange={this.state.selectValue} rate={0}/>}
                     </label>
                     <Link to="/">
                         <input type="submit" value="Skapa" onClick={this.postToApi} disabled={!this.disabledButton()}/>

@@ -1,3 +1,7 @@
 export {default as Hero} from '../containers/hero/Hero'
 export {default as Create} from './create/Create'
 export {default as Feed} from './feed/Feed'
+export {default as Subscribers} from './subscribers/Subscribers'
+export {default as App} from './start/App'
+export {default as Add} from './subscribersAdd/SubscribersAdd'
+export {default as Edit} from './subscribersEdit/Edit'
